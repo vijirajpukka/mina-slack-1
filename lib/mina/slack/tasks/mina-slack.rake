@@ -1,4 +1,4 @@
-require 'rest_client'
+require 'rest-client'
 require 'json'
 require 'yaml'
 
@@ -28,7 +28,7 @@ namespace :slack do
         ------------------------------
         #{msg}
       EOS
-      RestClient.post hook_url, payload: payload.to_json
+      RestClient.post(hook_url, payload.to_json, {})
     end
   end
 end
